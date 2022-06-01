@@ -1,0 +1,50 @@
+call plug#begin()
+    Plug 'morhetz/gruvbox'
+    Plug 'vim-airline/vim-airline'
+    Plug 'vim-airline/vim-airline-themes'
+    Plug 'ryanoasis/vim-devicons'
+
+    Plug 'airblade/vim-gitgutter'
+    Plug 'tpope/vim-fugitive'
+
+    Plug 'jiangmiao/auto-pairs'
+call plug#end()
+
+syntax on
+filetype plugin indent on
+
+set encoding=UTF-8
+set gfn=FantasqueSansMono\ Nerd\ Font\ Mono:h14,FiraCode\ Nerd\ Font:h14,Source\ Code\ Pro:h15,Menlo:h15
+
+set number
+set relativenumber
+set cursorline
+set ruler
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+
+set autoindent
+set cindent
+set smartindent
+
+set nobackup
+set nowritebackup
+set noswapfile
+
+colorscheme gruvbox
+set background=dark
+set noshowmode
+set lazyredraw
+set laststatus=2
+set updatetime=300
+set hidden
+
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#formatter='unique_tail'
+
+if &term =~ '256color'
+    set t_ut=
+endif
